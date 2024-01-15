@@ -1,0 +1,28 @@
+{
+    "portfolio":{
+        "bmicalculator":{
+            "name":"",
+            "introduction":"",
+            "image":"",
+            "link":""
+        },
+        "calculator":{
+            "name":"",
+            "introduction":"",
+            "image":"",
+            "link":""
+        },
+        "calgrade":{
+            "name":"",
+            "introduction":"",
+            "image":"",
+            "link":""
+        },
+        "taichung-hiking":{
+            "name":"台中好健行",
+            "introduction":"這是與朋友一起利用基礎的網頁框架和政府的開放資料(json)所製作出來的網頁",
+            "image":"../media/taichung-hiking 01.png",
+            "link":"taichung-hiking/index.html"
+        }
+    }
+}
