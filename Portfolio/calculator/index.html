@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="sytle.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="main-header">
+            線上計算機
+        </h1>
+    </header>
+    <aside id="sidebar">
+        <p class="announcement"><strong>最後更新日期</strong><small>23.12.2</small></p>
+        <ul class="ann-ul">
+            <li><strong>~目前無計算功能~(待修)</strong></li>
+            <li>顯示功能待修正(未及時同步)</li>
+            <li>sign-btn無作用</li>
+            <li>per-btn無作用</li>
+            <li>div-btn無作用</li>
+            <li>dot-btn無作用</li>
+            <li>eq-btn無作用</li>
+        </ul>
+    </aside>
+    <div id="cal-body">
+        <form>
+            <div class="cal-button">
+                <table class="btn-tb">
+                    <tr>
+                        <td colspan="4">
+                            <p id="cal-src">0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="AC-btn" class="btn">AC</button>
+                        </td>
+                        <td>
+                            <button id="sign-btn" class="btn">+/-</button>
+                        </td>
+                        <td>
+                            <button id="per-btn" class="btn">%</button>
+                        </td>
+                        <td>
+                            <button id="div-btn" class="btn">÷</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="seven-btn" class="btn" type="button" value="7" onclick="pushElements(7),show()">
+                        </td>
+                        <td>
+                            <input id="eight-btn" class="btn" type="button" value="8" onclick="pushElements(8),show()">
+                        </td>
+                        <td>
+                            <input id="nine-btn" class="btn" type="button" value="9" onclick="pushElements(9),show()">
+                        </td>
+                        <td>
+                            <input id="mul-btn" class="btn" type="button" value="x" onclick="pushElements('x'),show()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="four-btn" class="btn" type="button" value="4" onclick="pushElements(4),show()">
+                        </td>
+                        <td>
+                            <input id="five-btn" class="btn" type="button" value="5" onclick="pushElements(5),show()">
+                        </td>
+                        <td>
+                            <input id="six-btn" class="btn" type="button" value="6" onclick="pushElements(6),show()">
+                        </td>
+                        <td>
+                            <input id="minus-btn" class="btn" type="button" value="-" onclick="pushElements('-'),show()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="one-btn" class="btn" type="button" value="1" onclick="pushElements(1),show()">
+                        </td>
+                        <td>
+                            <input id="two-btn" class="btn" type="button" value="2" onclick="pushElements(2),show()">
+                        </td>
+                        <td>
+                            <input id="thr-btn" class="btn" type="button" value="3" onclick="pushElements(3),show()">
+                        </td>
+                        <td>
+                            <input id="add-btn" class="btn" type="button" value="+" onclick="pushElements('+'),show()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input id="zero-btn" class="btn" type="button" value="0" onclick="pushElements(0),show()">
+                        </td>
+                        <td>
+                            <input id="dot-btn" class="btn" type="button" value="." onclick="pushElements('.'),show()">
+                        </td>
+                        <td>
+                            <input id="eq-btn" class="btn" type="button" value="=" onclick="pushElements('=')">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
