@@ -51,7 +51,7 @@ html,body{
     transition: 0.5s;
 }
 #footer{
-    height: 10%;
+    height: fit-content;
     width: 98%;
     padding: 1%;
     background-color: black;
