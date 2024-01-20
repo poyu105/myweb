@@ -1,17 +1,56 @@
-#main{
-    background: rgba(0, 0, 0, 0.35);
-    text-align: center;
-    width: 60%;
-    height: fit-content;
-    padding: 1%;
-    margin: 7% 20%;
-    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.35);
-    border: 0;
-    border-radius: 10px;
+body{
+    background-image: url(../media/ab-backgroundimg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
-.main-content{
-    color: #e6e5e5;
+#main{
+    background: rgba(245, 244, 244, 0.863);
+    width: 80%;
+    height: fit-content;
+    padding: 0 1%;
+    margin: 7% 10%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.178);
+    border-radius: 5px;
+    line-height: 35px;
+
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+}
+.header{
+    color: #000000;
+    border-bottom: 1px solid black;
     text-align: center;
     font-size: larger;
-    line-height: 30px;
+}
+#main p{
+    margin: 1% 3%;
+}
+.title{
+    width: fit-content;
+    margin: 1% 0;
+    border-bottom: 1px solid black;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 1%;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.myImg{
+}
+.content p{
+    width: 50%;
+    margin: 3%;
+}
+.intro li{
+    list-style-type: none;
 }
