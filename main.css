@@ -35,6 +35,7 @@ html,body{
     text-align: center;
 }
 .nav-link{
+    display: block;
     padding: 10%;
     text-decoration: none;
     font-size: 1.3rem;
