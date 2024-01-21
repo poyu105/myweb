@@ -80,9 +80,9 @@ html,body{
         cursor: pointer;
     }
     .burger span{
-        width: 50px;
-        height: 11px;
-        padding: 2%;
+        width: 47px;
+        height: 8px;
+        padding: 1%;
         background-color: rgb(31, 30, 30);
         border-radius: 10px;
     }
