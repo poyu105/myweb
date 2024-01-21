@@ -15,15 +15,23 @@ body{
     box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.178);
     border-radius: 5px;
     line-height: 35px;
-
     color: rgb(0, 0, 0);
     font-size: 1rem;
 }
 .header{
-    color: #000000;
-    border-bottom: 1px solid black;
+    color: #000000cb;
+    border-radius: 5px;
     text-align: center;
     font-size: larger;
+}
+.header h1{
+    margin: 2% 0 1%;
+}
+.header .pse-ele{
+    width: 100%;
+    height: 4px;
+    background-color: rgba(180, 178, 178, 0.507);
+    border-radius: 5px;
 }
 #main p{
     margin: 1% 3%;
@@ -31,9 +39,18 @@ body{
 .title{
     width: fit-content;
     margin: 1% 0;
-    border-bottom: 1px solid black;
+}
+.title h2{
+    margin: 0;
+}
+.title .pse-ele{
+    width: initial;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
 }
 .intro{
+    color: rgba(0, 0, 0, 0.836);
     display: flex;
     flex-direction: column;
     align-items: center;
