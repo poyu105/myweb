@@ -71,3 +71,11 @@ body{
 .intro li{
     list-style-type: none;
 }
+@media (max-width: 426px){
+    #main{
+        font-size: 0.7rem;
+    }
+    .intro{
+        line-height: 20px;
+    }
+}
