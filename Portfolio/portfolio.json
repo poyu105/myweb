@@ -1,28 +1,28 @@
 {
     "portfolios":[
         {
-            "name":"taichung-hiking",
+            "name":"台中好健行",
             "describe":"與朋友合作利用Ajax實作，將政府開放資料的json檔與網頁的串接，實現網頁搜尋的功能",
             "introduction":"",
-            "image":"https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2001.png?raw=true",
+            "image":["https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2001.png?raw=true","https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2002.png?raw=true"],
             "type":"web"
         },
         {
-            "name":"bmicalculator",
+            "name":"bmi計算機",
             "describe":"利用Javascript讓網頁能夠進行簡單的數學運算",
             "introduction":"",
             "image":[""],
             "type":"web"
         },
         {
-            "name":"calculator",
+            "name":"計算機",
             "describe":"將計算機簡單的計算功能在網頁上實現",
             "introduction":"",
             "image":[""],
             "type":"web"
         },
         {
-            "name":"calgrade",
+            "name":"成績計算機",
             "describe":"一個簡單的Javascript練習",
             "introduction":"",
             "image":[""],
