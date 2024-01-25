@@ -2,7 +2,7 @@
     "portfolios":[
         {
             "name":"台中好健行",
-            "describe":"與朋友合作利用Ajax實作，將政府開放資料的json檔與網頁的串接，實現網頁搜尋的功能",
+            "describe":"利用政府開放資料json檔加以修改並製作成一個台中健行步道的瀏覽網頁",
             "introduction":"",
             "image":["https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2001.png?raw=true","https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2002.png?raw=true"],
             "type":"web"
