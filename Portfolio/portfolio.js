@@ -8,6 +8,8 @@ $(document).ready(function () {
     $('.btn').click(function (e) { 
         e.preventDefault();
         getData($(this).val());
+        $('.active').removeClass('active');
+        $(this).addClass('active');
     });
 });
 function getData(val){

@@ -34,6 +34,10 @@ body{
     color: rgb(0, 0, 0);
     border: 0;
 }
+.btn.active{
+    background-color: rgba(46, 46, 46, 0.671);
+    color: white;
+}
 .btn:hover{
     cursor: pointer;
     color: white;
