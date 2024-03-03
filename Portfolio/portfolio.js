@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('.btn').click(function (e) { 
         e.preventDefault();
         getData($(this).val());
-        $('.active').removeClass('active');
+        $('.btn.active').removeClass('active');
         $(this).addClass('active');
     });
 });
@@ -73,7 +73,13 @@ function getData(val){
             }
             let searchSum = $('<div>').addClass('search-sum').text("共"+sum+"筆結果");
             $('.main-nav').after(searchSum);
+            //no results found msg
+            if(sum==0){
+                let card = $('<div>').addClass('card');
+                let title = $('<h2>').addClass('title').text("Type : "+val+". No results found!");
+                card.append(title);
+                $('.post').append(card);
+            }
         }
     });
-    console.log("btn value = "+val);
 }
