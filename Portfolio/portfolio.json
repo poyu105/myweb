@@ -2,30 +2,10 @@
     "portfolios":[
         {
             "name":"台中好健行",
-            "describe":"利用政府開放資料json檔加以修改並製作成一個台中健行步道的瀏覽網頁",
+            "describe":"使用基本html、css、javascript，並利用政府開放資料json檔加以修改並製作成一個台中市健行步道的瀏覽網頁",
             "introduction":"",
             "image":["https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2001.png?raw=true","https://github.com/poyu105/myweb-new-/blob/master/Portfolio/media/taichung-hiking%2002.png?raw=true"],
-            "type":"web"
-        },
-        {
-            "name":"bmi計算機",
-            "describe":"利用Javascript讓網頁能夠進行簡單的數學運算",
-            "introduction":"",
-            "image":[""],
-            "type":"web"
-        },
-        {
-            "name":"計算機",
-            "describe":"將計算機簡單的計算功能在網頁上實現",
-            "introduction":"",
-            "image":[""],
-            "type":"web"
-        },
-        {
-            "name":"成績計算機",
-            "describe":"一個簡單的Javascript練習",
-            "introduction":"",
-            "image":[""],
+            "link":"https://poyu105.github.io/taichung-hiking/",
             "type":"web"
         }
     ]

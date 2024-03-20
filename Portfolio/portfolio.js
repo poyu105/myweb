@@ -33,12 +33,13 @@ function getData(val){
                     let cardBottomLine = $('<div>').addClass('bottom-line');
                     let title = $('<h2>').addClass('title').text(data.portfolios[i]["name"]);
                     let describe = $('<div>').addClass('describe').text(data.portfolios[i]["describe"]);
-                    let image = $('<img>').addClass('cover-img').attr("src", data.portfolios[i]);
+                    let image = $('<img>').addClass('cover-img').attr("src", data.portfolios[i]["image"]);
+                    let link = $('<a>').addClass('visit-link').text("造訪網頁").attr("href",data.portfolios[i]["link"]);
 
                     //配合排版新增容器
                     //包覆content
                     let content = $('<div>').addClass('main-content');
-                    content.append(title ,describe);
+                    content.append(title ,describe, link);
                     //包覆image and content
                     let insideContain = $('<div>').addClass('inside-contain');
                     insideContain.append(image ,content);
@@ -56,12 +57,13 @@ function getData(val){
                         let cardBottomLine = $('<div>').addClass('bottom-line');
                         let title = $('<h2>').addClass('title').text(data.portfolios[i]["name"]);
                         let describe = $('<div>').addClass('describe').text(data.portfolios[i]["describe"]);
-                        let image = $('<img>').addClass('cover-img').attr("src", data.portfolios[i]);
+                        let image = $('<img>').addClass('cover-img').attr("src", data.portfolios[i]["image"]);
+                        let link = $('<a>').addClass('visit-link').text("造訪網頁").attr("href",data.portfolios[i]["link"]);
 
                         //配合排版新增容器
                         //包覆content
                         let content = $('<div>').addClass('main-content');
-                        content.append(title ,describe);
+                        content.append(title ,describe, link);
                         //包覆image and content
                         let insideContain = $('<div>').addClass('inside-contain');
                         insideContain.append(image ,content);

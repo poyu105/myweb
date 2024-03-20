@@ -59,13 +59,31 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .cover-img{
-    width: 200px;
+    width: 450px;
     background-color: beige;
 }
 .main-content{
     width: 50%;
+}
+.describe{
+    margin-bottom: 5%;
+}
+.visit-link{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgba(56, 56, 56, 0.24);
+    padding: 10px;
+    background-color: rgb(158, 158, 158);
+}
+.visit-link:hover{
+    cursor: pointer;
+    color: rgb(58, 58, 58);
+    background-color: rgb(221, 221, 221);
 }
 .bottom-line{
     margin-top: 2%;
