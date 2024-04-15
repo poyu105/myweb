@@ -96,7 +96,7 @@ body{
     height: 2px;
     background-color: rgba(97, 97, 97, 0.699);
 }
-@media (max-width: 630px){
+@media (max-width: 680px){
     .full-nav{
         display: none;
     }
