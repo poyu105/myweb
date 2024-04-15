@@ -3,13 +3,34 @@ $(document).ready(function () {
         e.preventDefault();
         $('.navbar').toggleClass('show-menu');
     });
-
+    //init pageData
     getData('all');
+    //change data by btn
     $('.btn').click(function (e) { 
         e.preventDefault();
         getData($(this).val());
         $('.btn.active').removeClass('active');
         $(this).addClass('active');
+
+        // 获取按钮的值
+        var btnValue = $(this).val();
+        // 将 select 中带有相同值的 option 设置为 selected
+        $('.main-nav select').val(btnValue);
+    });
+    //change data by slc
+    $('.slc-nav').change(function (e) { 
+        e.preventDefault();
+        var selectValue=$(this).find(':selected').val();
+        getData(selectValue);
+
+        // 将按钮中带有相同值的按钮设置为 active
+        $('.main-nav .btn').each(function() {
+            if ($(this).val() === selectValue) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
     });
 });
 function getData(val){
@@ -74,7 +95,7 @@ function getData(val){
                 });
             }
             let searchSum = $('<div>').addClass('search-sum').text("共"+sum+"筆結果");
-            $('.main-nav').after(searchSum);
+            $('.show-search-result').after(searchSum);
             //no results found msg
             if(sum==0){
                 let card = $('<div>').addClass('card');

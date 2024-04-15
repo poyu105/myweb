@@ -26,6 +26,9 @@ body{
     background-color: rgb(209, 196, 179);
     border-radius: 5px;
 }
+.slc-nav{
+    display: none;
+}
 .btn{
     margin-left: 1%;
     font-size: 1.3rem;
@@ -62,7 +65,7 @@ body{
     align-items: center;
 }
 .cover-img{
-    width: 450px;
+    width: 45%;
     background-color: beige;
 }
 .main-content{
@@ -77,8 +80,10 @@ body{
     color: rgb(255, 255, 255);
     border-radius: 15px;
     border: 1px solid rgba(56, 56, 56, 0.24);
-    padding: 10px;
+    padding: 6px;
     background-color: rgb(158, 158, 158);
+    margin-bottom: 3%;
+    width: 100%;
 }
 .visit-link:hover{
     cursor: pointer;
@@ -86,8 +91,24 @@ body{
     background-color: rgb(221, 221, 221);
 }
 .bottom-line{
-    margin-top: 2%;
+    margin-top: 3%;
     width: 100%;
     height: 2px;
     background-color: rgba(97, 97, 97, 0.699);
+}
+@media (max-width: 630px){
+    .full-nav{
+        display: none;
+    }
+    .slc-nav{
+        display: block;
+        width: 100%;
+        height: fit-content;
+        padding: 1.5% 0;
+    }
+    .slc-nav select{
+        width: 90%;
+        text-align: center;
+        font-size: large;
+    }
 }
