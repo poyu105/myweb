@@ -55,6 +55,15 @@ html,body{
     box-shadow: 0 0 2px 0 black;
 }
 #main{
+    background: rgba(245, 244, 244, 0.863);
+    width: 80%;
+    height: fit-content;
+    padding: 0 1%;
+    margin: 7% 10%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.178);
+    border-radius: 5px;
     flex: 1;
 }
 #footer{
@@ -136,5 +145,11 @@ html,body{
         color: white;
         border-radius: 0;
         box-shadow: 0 0 0;
+    }
+}
+@media (max-width: 660px){
+    #main{
+        width: 85% !important;
+        margin: 7% 7.5% !important;
     }
 }
