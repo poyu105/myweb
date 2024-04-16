@@ -1,8 +1,4 @@
 $(document).ready(function () {
-    $('.burger').click(function (e) { 
-        e.preventDefault();
-        $('.navbar').toggleClass('show-menu');
-    });
     //init pageData
     getData('all');
     //change data by btn
