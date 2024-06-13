@@ -9,6 +9,16 @@
                      "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG03.png"],
             "link":"https://poyu105.github.io/taichung-hiking/",
             "type":"web"
+        },
+        {
+            "name":"旅遊行程預約平台",
+            "describe":"使用Asp.Net Core、MVC架構、Asp.Net Identity進行開發，資料庫使用MS SQL存放使用者資料、景點資訊、預約資料、行程資訊。該網頁提供管理員 新增/修改/刪除 行程及其各項景點，並提供使用者預約該行程，且可查看和修改相關預約資訊。",
+            "introduction":"",
+            "images":["https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG01.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG02.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG03.png"],
+            "link":"NONE",
+            "type":"web"
         }
     ]
 }
