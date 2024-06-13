@@ -79,7 +79,8 @@ function getData(val){
                     let carousel = $('<div>').addClass('carousel slide').attr({
                         'id': carouselId,
                         'data-bs-ride': 'carousel',
-                        'data-bs-interval': '3000'
+                        'data-bs-interval': '3000',
+                        'style':'cursor: pointer;'
                     });
                     let carouselInner = $('<div>').addClass('carousel-inner');
 
@@ -90,6 +91,12 @@ function getData(val){
                         let img = $('<img>').addClass('d-block w-100 rounded').attr("src", imgUrl);
                         carouselItem.append(img);
                         carouselInner.append(carouselItem);
+
+                        // 設置圖片點擊事件
+                        img.on('click', function() {
+                            $('#modalImage').attr('src', imgUrl);
+                            $('#imageModal').modal('show');
+                        });
                     });
 
                     // 加入輪播圖控制按鈕
@@ -145,7 +152,8 @@ function getData(val){
                         let carousel = $('<div>').addClass('carousel slide').attr({
                             'id': carouselId,
                             'data-bs-ride': 'carousel',
-                            'data-bs-interval': '3000'
+                            'data-bs-interval': '3000',
+                            'style':'cursor: pointer;'
                         });
                         let carouselInner = $('<div>').addClass('carousel-inner');
 
@@ -156,6 +164,12 @@ function getData(val){
                             let img = $('<img>').addClass('d-block w-100 rounded').attr("src", imgUrl);
                             carouselItem.append(img);
                             carouselInner.append(carouselItem);
+
+                            // 設置圖片點擊事件
+                            img.on('click', function() {
+                            $('#modalImage').attr('src', imgUrl);
+                            $('#imageModal').modal('show');
+                            });
                         });
 
                         // 加入輪播圖控制按鈕
