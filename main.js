@@ -76,7 +76,11 @@ function getData(val){
                     
                     // 建立輪播圖結構
                     let carouselId = 'carousel' + i;
-                    let carousel = $('<div>').addClass('carousel slide').attr('id', carouselId).attr('data-bs-ride', 'carousel');
+                    let carousel = $('<div>').addClass('carousel slide').attr({
+                        'id': carouselId,
+                        'data-bs-ride': 'carousel',
+                        'data-bs-interval': '3000'
+                    });
                     let carouselInner = $('<div>').addClass('carousel-inner');
 
                     // 增加輪播圖項目
@@ -89,11 +93,19 @@ function getData(val){
                     });
 
                     // 加入輪播圖控制按鈕
-                    let prevButton = $('<button>').addClass('carousel-control-prev').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'prev');
+                    let prevButton = $('<button>').addClass('carousel-control-prev').attr({
+                        'type': 'button',
+                        'data-bs-target': '#' + carouselId,
+                        'data-bs-slide': 'prev'
+                    });
                     prevButton.append('<span class="carousel-control-prev-icon" aria-hidden="true"></span>');
                     prevButton.append('<span class="visually-hidden">Previous</span>');
 
-                    let nextButton = $('<button>').addClass('carousel-control-next').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'next');
+                    let nextButton = $('<button>').addClass('carousel-control-next').attr({
+                        'type': 'button',
+                        'data-bs-target': '#' + carouselId,
+                        'data-bs-slide': 'next'
+                    });
                     nextButton.append('<span class="carousel-control-next-icon" aria-hidden="true"></span>');
                     nextButton.append('<span class="visually-hidden">Next</span>');
 
@@ -112,6 +124,12 @@ function getData(val){
                     card.append(cardrow);
                     
                     $('.post').append(card);
+
+                    // 手動初始化輪播
+                    new bootstrap.Carousel(document.querySelector('#' + carouselId), {
+                        interval: 3000,
+                        ride: 'carousel'
+                    });
                 });
             }
             else{
@@ -124,7 +142,11 @@ function getData(val){
                         
                         // 建立輪播圖結構
                         let carouselId = 'carousel' + i;
-                        let carousel = $('<div>').addClass('carousel slide').attr('id', carouselId).attr('data-bs-ride', 'carousel');
+                        let carousel = $('<div>').addClass('carousel slide').attr({
+                            'id': carouselId,
+                            'data-bs-ride': 'carousel',
+                            'data-bs-interval': '3000'
+                        });
                         let carouselInner = $('<div>').addClass('carousel-inner');
 
                         // 增加輪播圖項目
@@ -137,11 +159,19 @@ function getData(val){
                         });
 
                         // 加入輪播圖控制按鈕
-                        let prevButton = $('<button>').addClass('carousel-control-prev').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'prev');
+                        let prevButton = $('<button>').addClass('carousel-control-prev').attr({
+                            'type': 'button',
+                            'data-bs-target': '#' + carouselId,
+                            'data-bs-slide': 'prev'
+                        });
                         prevButton.append('<span class="carousel-control-prev-icon" aria-hidden="true"></span>');
                         prevButton.append('<span class="visually-hidden">Previous</span>');
 
-                        let nextButton = $('<button>').addClass('carousel-control-next').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'next');
+                        let nextButton = $('<button>').addClass('carousel-control-next').attr({
+                            'type': 'button',
+                            'data-bs-target': '#' + carouselId,
+                            'data-bs-slide': 'next'
+                        });
                         nextButton.append('<span class="carousel-control-next-icon" aria-hidden="true"></span>');
                         nextButton.append('<span class="visually-hidden">Next</span>');
 
@@ -160,6 +190,12 @@ function getData(val){
                         card.append(cardrow);
                         
                         $('.post').append(card);
+                        
+                        // 手動初始化輪播
+                        new bootstrap.Carousel(document.querySelector('#' + carouselId), {
+                            interval: 3000,
+                            ride: 'carousel'
+                        });
                     }
                 });
             }
