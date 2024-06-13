@@ -54,7 +54,7 @@ function formatDate(date) {
     return `${day} ${month} ${dayOfMonth}, ${year}`;
   }
 //get data from portfolio
-  function getData(val){
+function getData(val){
     $.ajax({
         type: "get",
         url: "./portfolio.json",
@@ -71,15 +71,41 @@ function formatDate(date) {
                 $.each(data.portfolios, function (i, value) { 
                     sum++;
                     let card = $('<div>').addClass('card mb-3');
-                    let cardrow=$('<div>').addClass('row g-0');
-                    let cardcol4=$('<div>').addClass('col-md-4');
-                    let image = $('<img>').addClass('img-fluid rounded-start').attr("src", data.portfolios[i]["image"]);
-                    let cardcol8=$('<div>').addClass('col-md-8');
-                    let cardbody=$('<div>').addClass('card-body');
+                    let cardrow = $('<div>').addClass('row g-0');
+                    let cardcol4 = $('<div>').addClass('col-md-4');
+                    
+                    // 建立輪播圖結構
+                    let carouselId = 'carousel' + i;
+                    let carousel = $('<div>').addClass('carousel slide').attr('id', carouselId).attr('data-bs-ride', 'carousel');
+                    let carouselInner = $('<div>').addClass('carousel-inner');
+
+                    // 增加輪播圖項目
+                    data.portfolios[i]["images"].forEach((imgUrl, index) => {
+                        let carouselItem = $('<div>').addClass('carousel-item');
+                        if(index === 0) carouselItem.addClass('active');
+                        let img = $('<img>').addClass('d-block w-100 rounded').attr("src", imgUrl);
+                        carouselItem.append(img);
+                        carouselInner.append(carouselItem);
+                    });
+
+                    // 加入輪播圖控制按鈕
+                    let prevButton = $('<button>').addClass('carousel-control-prev').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'prev');
+                    prevButton.append('<span class="carousel-control-prev-icon" aria-hidden="true"></span>');
+                    prevButton.append('<span class="visually-hidden">Previous</span>');
+
+                    let nextButton = $('<button>').addClass('carousel-control-next').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'next');
+                    nextButton.append('<span class="carousel-control-next-icon" aria-hidden="true"></span>');
+                    nextButton.append('<span class="visually-hidden">Next</span>');
+
+                    carousel.append(carouselInner, prevButton, nextButton);
+                    cardcol4.append(carousel);
+
+                    let cardcol8 = $('<div>').addClass('col-md-8');
+                    let cardbody = $('<div>').addClass('card-body');
                     let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                     let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
-                    let link = $('<a>').addClass('link').text("造訪網頁").attr("href",data.portfolios[i]["link"]);
-                    cardcol4.append(image);
+                    let link = $('<a>').addClass('link').text("造訪網頁").attr("href", data.portfolios[i]["link"]);
+
                     cardbody.append(title, cardtext, link);
                     cardcol8.append(cardbody);
                     cardrow.append(cardcol4, cardcol8);
@@ -91,17 +117,43 @@ function formatDate(date) {
             else{
                 $.each(data.portfolios, function (i, value) {
                     if(data.portfolios[i]["type"].includes(val)){
-                        sum ++;
+                        sum++;
                         let card = $('<div>').addClass('card mb-3');
-                        let cardrow=$('<div>').addClass('row g-0');
-                        let cardcol4=$('<div>').addClass('col-md-4');
-                        let image = $('<img>').addClass('img-fluid rounded-start').attr("src", data.portfolios[i]["image"]);
-                        let cardcol8=$('<div>').addClass('col-md-8');
-                        let cardbody=$('<div>').addClass('card-body');
-                        let title = $('<h5>').addClass('card-title').text(data.portfolios[i]["name"]);
+                        let cardrow = $('<div>').addClass('row g-0');
+                        let cardcol4 = $('<div>').addClass('col-md-4');
+                        
+                        // 建立輪播圖結構
+                        let carouselId = 'carousel' + i;
+                        let carousel = $('<div>').addClass('carousel slide').attr('id', carouselId).attr('data-bs-ride', 'carousel');
+                        let carouselInner = $('<div>').addClass('carousel-inner');
+
+                        // 增加輪播圖項目
+                        data.portfolios[i]["images"].forEach((imgUrl, index) => {
+                            let carouselItem = $('<div>').addClass('carousel-item');
+                            if(index === 0) carouselItem.addClass('active');
+                            let img = $('<img>').addClass('d-block w-100 rounded').attr("src", imgUrl);
+                            carouselItem.append(img);
+                            carouselInner.append(carouselItem);
+                        });
+
+                        // 加入輪播圖控制按鈕
+                        let prevButton = $('<button>').addClass('carousel-control-prev').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'prev');
+                        prevButton.append('<span class="carousel-control-prev-icon" aria-hidden="true"></span>');
+                        prevButton.append('<span class="visually-hidden">Previous</span>');
+
+                        let nextButton = $('<button>').addClass('carousel-control-next').attr('type', 'button').attr('data-bs-target', '#' + carouselId).attr('data-bs-slide', 'next');
+                        nextButton.append('<span class="carousel-control-next-icon" aria-hidden="true"></span>');
+                        nextButton.append('<span class="visually-hidden">Next</span>');
+
+                        carousel.append(carouselInner, prevButton, nextButton);
+                        cardcol4.append(carousel);
+
+                        let cardcol8 = $('<div>').addClass('col-md-8');
+                        let cardbody = $('<div>').addClass('card-body');
+                        let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                         let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
-                        let link = $('<a>').addClass('link').text("造訪網頁").attr("href",data.portfolios[i]["link"]);
-                        cardcol4.append(image);
+                        let link = $('<a>').addClass('link').text("造訪網頁").attr("href", data.portfolios[i]["link"]);
+
                         cardbody.append(title, cardtext, link);
                         cardcol8.append(cardbody);
                         cardrow.append(cardcol4, cardcol8);

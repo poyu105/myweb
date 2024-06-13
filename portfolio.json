@@ -4,7 +4,9 @@
             "name":"台中好健行",
             "describe":"使用基本html、css、javascript，並利用政府開放資料json檔加以修改並製作成一個台中市健行步道的瀏覽網頁",
             "introduction":"",
-            "image":"https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG01.png",
+            "images":["https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG01.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG02.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG03.png"],
             "link":"https://poyu105.github.io/taichung-hiking/",
             "type":"web"
         }
