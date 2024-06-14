@@ -123,7 +123,10 @@ function getData(val){
                     let cardbody = $('<div>').addClass('card-body');
                     let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                     let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
-                    let link = $('<a>').addClass('link').text("造訪網頁").attr("href", data.portfolios[i]["link"]);
+                    let link = $('<a>').addClass('link').text("造訪網頁").attr({
+                        'href' : data.portfolios[i]["link"],
+                        'target' : '_blank'
+                    });
 
                     cardbody.append(title, cardtext, link);
                     cardcol8.append(cardbody);
@@ -196,7 +199,10 @@ function getData(val){
                         let cardbody = $('<div>').addClass('card-body');
                         let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                         let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
-                        let link = $('<a>').addClass('link').text("造訪網頁").attr("href", data.portfolios[i]["link"]);
+                        let link = $('<a>').addClass('link').text("造訪網頁").attr({
+                            'href' : data.portfolios[i]["link"],
+                            'target' : '_blank'
+                        });
 
                         cardbody.append(title, cardtext, link);
                         cardcol8.append(cardbody);
