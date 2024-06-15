@@ -124,15 +124,23 @@ function getData(val){
                     let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                     let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
                     //_blank icon
-                    let icon = $('<i>').addClass('bi bi-box-arrow-up-right');
+                    let linkicon = $('<i>').addClass('bi bi-box-arrow-up-right');
                     //link disabled if the data has "NONE" link
-                    let link = $('<a>').addClass('btn btn-primary '+(data.portfolios[i]["link"] === "NONE" ? 'disabled' : '')).text("造訪網頁").attr({
+                    let link = $('<a>').addClass('btn btn-primary mt-1 me-2 '+(data.portfolios[i]["link"] === "NONE" ? 'disabled' : '')).text("造訪網頁").attr({
                         'href' : data.portfolios[i]["link"],
                         'target' : '_blank'
                     });
-                    link.append(icon);
+                    link.append(linkicon);
+                    //_blank icon
+                    let scourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
+                    //scource link
+                    let scourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Scource Code").attr({
+                        'herf' : data.portfolios[i]["scource link"],
+                        'target' : '_blank'
+                    });
+                    scourceLink.append(scourceicon);
 
-                    cardbody.append(title, cardtext, link);
+                    cardbody.append(title, cardtext, link, scourceLink);
                     cardcol8.append(cardbody);
                     cardrow.append(cardcol4, cardcol8);
                     card.append(cardrow);
@@ -174,8 +182,8 @@ function getData(val){
 
                             // 設置圖片點擊事件
                             img.on('click', function() {
-                            $('#modalImage').attr('src', imgUrl);
-                            $('#imageModal').modal('show');
+                                $('#modalImage').attr('src', imgUrl);
+                                $('#imageModal').modal('show');
                             });
                         });
 
@@ -204,15 +212,23 @@ function getData(val){
                         let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                         let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
                         //_blank icon
-                        let icon = $('<i>').addClass('bi bi-box-arrow-up-right');
+                        let linkicon = $('<i>').addClass('bi bi-box-arrow-up-right');
                         //link disabled if the data has "NONE" link
-                        let link = $('<a>').addClass('btn btn-primary '+(data.portfolios[i]["link"] === "NONE" ? 'disabled' : '')).text("造訪網頁").attr({
+                        let link = $('<a>').addClass('btn btn-primary mt-1 me-2 '+(data.portfolios[i]["link"] === "NONE" ? 'disabled' : '')).text("造訪網頁").attr({
                             'href' : data.portfolios[i]["link"],
                             'target' : '_blank'
                         });
-                        link.append(icon);
+                        link.append(linkicon);
+                        //_blank icon
+                        let scourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
+                        //scource link
+                        let scourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Scource Code").attr({
+                            'herf' : data.portfolios[i]["scource link"],
+                            'target' : '_blank'
+                        });
+                        scourceLink.append(scourceicon);
 
-                        cardbody.append(title, cardtext, link);
+                        cardbody.append(title, cardtext, link, scourceLink);
                         cardcol8.append(cardbody);
                         cardrow.append(cardcol4, cardcol8);
                         card.append(cardrow);
