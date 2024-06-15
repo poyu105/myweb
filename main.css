@@ -34,3 +34,11 @@ body{
     background-color: rgb(165, 165, 165) !important;
     color: #ffffff !important;
 }
+.btn:disabled, .btn.disabled {
+    cursor: not-allowed; 
+    pointer-events: auto !important; 
+}
+/* Prevent clicking events of disabled buttons*/
+.btn:disabled:active, .btn.disabled:active {
+    pointer-events: none !important;
+}
