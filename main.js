@@ -135,7 +135,7 @@ function getData(val){
                     let scourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
                     //scource link
                     let scourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Scource Code").attr({
-                        'herf' : data.portfolios[i]["scource link"],
+                        'href' : data.portfolios[i]["scource link"],
                         'target' : '_blank'
                     });
                     scourceLink.append(scourceicon);
@@ -223,7 +223,7 @@ function getData(val){
                         let scourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
                         //scource link
                         let scourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Scource Code").attr({
-                            'herf' : data.portfolios[i]["scource link"],
+                            'href' : data.portfolios[i]["scource link"],
                             'target' : '_blank'
                         });
                         scourceLink.append(scourceicon);
