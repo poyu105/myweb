@@ -26,11 +26,11 @@ body{
 .portfolio-nav{
     background-color: #ffffff;
 }
-.portfolio-nav.btn.active{
+.portfolio-nav .btn.active{
     background-color: rgb(122, 122, 122) !important;
     color: #ffffff !important;
 }
-.portfolio-nav.btn:hover{
+.portfolio-nav .btn:hover{
     background-color: rgb(165, 165, 165) !important;
     color: #ffffff !important;
 }
