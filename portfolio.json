@@ -21,6 +21,14 @@
             "link":"NONE",
             "scource link":"https://github.com/poyu105/Travel",
             "type":"web"
+        },
+        {
+            "name":"線上點餐系統",
+            "describe":"使用Vite+React開發的線上點餐系統(無後端資料庫功能)@目前網頁處於開發階段，僅供檢視目前進度@",
+            "images":["NONE"],
+            "link":"https://poyu105.github.io/OrderSystem/",
+            "scource link":"https://github.com/poyu105/OrderSystem",
+            "type":"web"
         }
     ]
 }
