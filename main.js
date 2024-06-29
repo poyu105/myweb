@@ -132,15 +132,15 @@ function getData(val){
                     });
                     link.append(linkicon);
                     //_blank icon
-                    let scourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
-                    //scource link
-                    let scourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Scource Code").attr({
-                        'href' : data.portfolios[i]["scource link"],
+                    let sourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
+                    //source link
+                    let sourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Source Code").attr({
+                        'href' : data.portfolios[i]["source link"],
                         'target' : '_blank'
                     });
-                    scourceLink.append(scourceicon);
+                    sourceLink.append(sourceicon);
 
-                    cardbody.append(title, cardtext, link, scourceLink);
+                    cardbody.append(title, cardtext, link, sourceLink);
                     cardcol8.append(cardbody);
                     cardrow.append(cardcol4, cardcol8);
                     card.append(cardrow);
@@ -220,15 +220,15 @@ function getData(val){
                         });
                         link.append(linkicon);
                         //_blank icon
-                        let scourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
-                        //scource link
-                        let scourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Scource Code").attr({
-                            'href' : data.portfolios[i]["scource link"],
+                        let sourceicon = $('<i>').addClass('bi bi-box-arrow-up-right');
+                        //source link
+                        let sourceLink = $('<a>').addClass('btn btn-secondary mt-1 me-2').text("Source Code").attr({
+                            'href' : data.portfolios[i]["source link"],
                             'target' : '_blank'
                         });
-                        scourceLink.append(scourceicon);
+                        sourceLink.append(sourceicon);
 
-                        cardbody.append(title, cardtext, link, scourceLink);
+                        cardbody.append(title, cardtext, link, sourceLink);
                         cardcol8.append(cardbody);
                         cardrow.append(cardcol4, cardcol8);
                         card.append(cardrow);
