@@ -29,6 +29,14 @@
             "link":"https://poyu105.github.io/OrderSystem/",
             "source link":"https://github.com/poyu105/OrderSystem",
             "type":"web"
+        },
+        {
+            "name":"LifeHub",
+            "describe":"使用Vite+React開發@目前網頁處於開發階段，僅供檢視目前進度@",
+            "images":["NONE"],
+            "link":"https://poyu105.github.io/LifeHub/",
+            "source link":"https://github.com/poyu105/LifeHub",
+            "type":"web"
         }
     ]
 }
