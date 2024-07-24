@@ -123,6 +123,18 @@ function getData(val){
                     let cardbody = $('<div>').addClass('card-body');
                     let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                     let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
+                    //cardfooter
+                    let cardfooter = $('<div>');
+                    //updateDate
+                    let date = $('<span>').addClass('fs-6').text(data.portfolios[i]["date"]);
+                    //tags
+                    let tags = $('<ul>').addClass('d-flex flex-wrap gap-1 m-0 p-0');
+                    data.portfolios[i]["tag"].forEach((tag)=>{
+                        let taglist = $('<li>').addClass('fs-6 list-none').text("#"+tag);
+                        tags.append(taglist);
+                    })
+                    cardfooter.append(date, tags);
+
                     //_blank icon
                     let linkicon = $('<i>').addClass('bi bi-box-arrow-up-right');
                     //link disabled if the data has "NONE" link
@@ -140,7 +152,7 @@ function getData(val){
                     });
                     sourceLink.append(sourceicon);
 
-                    cardbody.append(title, cardtext, link, sourceLink);
+                    cardbody.append(title, cardtext, cardfooter, link, sourceLink);
                     cardcol8.append(cardbody);
                     cardrow.append(cardcol4, cardcol8);
                     card.append(cardrow);
@@ -211,6 +223,18 @@ function getData(val){
                         let cardbody = $('<div>').addClass('card-body');
                         let title = $('<h3>').addClass('card-title fw-bold').text(data.portfolios[i]["name"]);
                         let cardtext = $('<div>').addClass('card-text').text(data.portfolios[i]["describe"]);
+                        //cardfooter
+                        let cardfooter = $('<div>');
+                        //updateDate
+                        let date = $('<span>').addClass('fs-6').text(data.portfolios[i]["date"]);
+                        //tags
+                        let tags = $('<ul>').addClass('d-flex flex-wrap gap-1 m-0 p-0');
+                        data.portfolios[i]["tag"].forEach((tag)=>{
+                            let taglist = $('<li>').addClass('fs-6 list-none').text("#"+tag);
+                            tags.append(taglist);
+                        })
+                        cardfooter.append(date, tags);
+
                         //_blank icon
                         let linkicon = $('<i>').addClass('bi bi-box-arrow-up-right');
                         //link disabled if the data has "NONE" link
@@ -228,7 +252,7 @@ function getData(val){
                         });
                         sourceLink.append(sourceicon);
 
-                        cardbody.append(title, cardtext, link, sourceLink);
+                        cardbody.append(title, cardtext, cardfooter, link, sourceLink);
                         cardcol8.append(cardbody);
                         cardrow.append(cardcol4, cardcol8);
                         card.append(cardrow);
