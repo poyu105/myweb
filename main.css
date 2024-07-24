@@ -42,3 +42,6 @@ body{
 .btn:disabled:active, .btn.disabled:active {
     pointer-events: none !important;
 }
+.list-none{
+    list-style-type: none;
+}
