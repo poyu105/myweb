@@ -9,6 +9,8 @@
                      "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG03.png"],
             "link":"https://poyu105.github.io/taichung-hiking/",
             "source link":"https://github.com/poyu105/taichung-hiking",
+            "tag":["Html","Bootstrap","Javascript","JQuery"],
+            "date":"2023-12-23",
             "type":"web"
         },
         {
@@ -20,6 +22,8 @@
                      "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG03.png"],
             "link":"NONE",
             "source link":"https://github.com/poyu105/Travel",
+            "tag":["C#","ASP.NET Core","MS SQL","Razor"],
+            "date":"2024-6-14",
             "type":"web"
         },
         {
@@ -28,14 +32,18 @@
             "images":["NONE"],
             "link":"https://poyu105.github.io/OrderSystem/",
             "source link":"https://github.com/poyu105/OrderSystem",
+            "tag":["Vite","React","Javascript","JSX"],
+            "date":"2024-7-3",
             "type":"web"
         },
         {
             "name":"LifeHub",
-            "describe":"使用Vite+React、tailwind css開發@目前網頁處於開發階段，僅供檢視目前進度@",
+            "describe":"使用Vite+React、tailwind css、Express.js、MongoDB開發@目前網頁處於開發階段，僅供檢視目前進度@",
             "images":["NONE"],
             "link":"https://poyu105.github.io/LifeHub/",
             "source link":"https://github.com/poyu105/LifeHub",
+            "tag":["Vite","React","Javascript","JSX","Tailwind CSS","Express.js","MongoDB"],
+            "date":"2024-7-24",
             "type":"web"
         }
     ]
