@@ -45,3 +45,27 @@ body{
 .list-none{
     list-style-type: none;
 }
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.col-md-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-4 img {
+    max-width: 100%;
+    height: auto;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(35, 35, 35, 0.886); /* 改變背景顏色，這裡是白色的50%透明度 */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8); /* 鼠標懸停時的顏色 */
+}
