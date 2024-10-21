@@ -1,6 +1,16 @@
 {
     "portfolios":[
         {
+            "name":"To-Do List",
+            "describe":"此專案為一個簡單的代辦事項清單，主要運用react狀態管理完成開發，為一小型作品",
+            "images":["NONE"],
+            "link":"https://poyu105.github.io/To-Do-List/",
+            "source link":"https://github.com/poyu105/To-Do-List",
+            "tag":["React","Javascript","JSX","Tailwind CSS"],
+            "date":"2024-10-21",
+            "type":"web"
+        },
+        {
             "name":"LifeHub-生活Pie",
             "describe":"此專案為個人發想作品，主要以地區為主的生活內容分享平台。使用者可以在此分享該地區的美食推薦、交通指南、購物指南以及休閒娛樂活動，讓大家能夠更方便地了解周邊的生活資訊。@本靜態網頁無法使用資料庫功能，詳細後端代碼另見github: https://github.com/poyu105/LifeHub-Backend @",
             "images":["https://raw.githubusercontent.com/poyu105/myweb/refs/heads/master/media/portfolio/lifehub-01.png",
@@ -9,7 +19,7 @@
             "link":"https://poyu105.github.io/LifeHub/",
             "source link":"https://github.com/poyu105/LifeHub",
             "tag":["Vite","React","Javascript","JSX","Tailwind CSS","Express.js","Node.js","RESTful API","MongoDB"],
-            "date":"2024-10-3",
+            "date":"2024-10-21",
             "type":"web"
         },
         {
