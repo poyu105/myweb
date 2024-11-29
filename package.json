@@ -1,7 +1,7 @@
 {
   "name": "myweb",
   "private": true,
-  "homepage": "https://github.com/poyu105/myweb",
+  "homepage": "https://poyu105.github.io/myweb",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
