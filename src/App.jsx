@@ -4,15 +4,17 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Skill from './pages/Skill'
+import Protfolio from './pages/Protfolio'
 
 function App() {  
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Navbar/>
-      <div className='text-md lg:mx-56 md:mx-36 sm:mx-16 mx-6 my-8 bg-slate-300'>
+      <div className='text-md lg:mx-56 md:mx-36 sm:mx-16 mx-6 my-8 text-slate-200 overflow-y-scroll'>
         <Home/>
         <About/>
         <Skill/>
+        <Protfolio/>
       </div>
       <Footer/>
     </div>
