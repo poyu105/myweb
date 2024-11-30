@@ -4,7 +4,7 @@ export default function About(){
     return(
         <section id="about" className="mt-2">
             <h1 className="text-4xl text-center border-t-2 border-b-2 sticky top-0 bg-slate-800">關於我</h1>
-            <div className="flex items-center gap-5 p-2">
+            <div className="flex items-center gap-5 p-2 md:flex-row flex-col">
                 <img className="w-48 h-auto rounded" alt="myPhoto" src="./image/myPhoto.jpg"></img>
                 <p>
                     &emsp;&emsp;我的程式之旅起源於我的高中時期，當時的資訊課接觸到了python，透過遊戲解謎的方式讓我開始慢慢了解程式的語法並且產生了興趣。<br/>
