@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Navbar(){
     // 最後更新日期
@@ -17,20 +16,20 @@ export default function Navbar(){
     };
     return(
         <header>
-            <nav className="flex flex-row justify-between items-center p-4 bg-orange-100">
-                <Link to="/home" className="text-4xl">我的網頁</Link>
+            <nav className="flex flex-row justify-between items-center p-4 text-neutral-200 bg-slate-900">
+                <a href="#" className="text-4xl">我的網頁</a>
                 <ul className="flex flex-row items-center gap-4">
                     <li>
-                        <Link to="#top">Home</Link>
+                        <a href="#top">Home</a>
                     </li>
                     <li>
-                        <Link to="#about">關於我</Link>
+                        <a href="#about">關於我</a>
                     </li>
                     <li>
-                        <Link to="#skill">技能</Link>
+                        <a href="#skill">技能</a>
                     </li>
                     <li>
-                        <Link to="#protfolio">作品集</Link>
+                        <a href="#protfolio">作品集</a>
                     </li>
                 </ul>
             </nav>
