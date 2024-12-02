@@ -16,9 +16,9 @@ export default function Navbar(){
     };
     return(
         <header>
-            <nav className="flex flex-row justify-between items-center p-4 text-neutral-200 bg-slate-900">
-                <a href="#" className="text-4xl">我的網頁</a>
-                <ul className="flex flex-row items-center gap-4">
+            <nav className="flex flex-row justify-between items-center md:p-4 p-2 text-neutral-200 bg-slate-900">
+                <a href="#" className="lg:text-4xl md:text-3xl text-xl">我的網頁</a>
+                <ul className="flex flex-row items-center gap-4 lg:text-lg md:text-base text-sm">
                     <li>
                         <a href="#top">Home</a>
                     </li>

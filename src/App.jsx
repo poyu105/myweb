@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="h-screen flex flex-col">
       <Navbar/>
-      <div className='text-md lg:mx-56 md:mx-36 sm:mx-16 mx-6 my-8 text-slate-200 overflow-y-scroll'>
+      <div className='lg:text-lg md:text-base text-sm lg:mx-56 md:mx-36 sm:mx-16 mx-6 my-8 text-slate-200 overflow-y-scroll'>
         <Home/>
         <About/>
         <Skill/>

@@ -3,7 +3,7 @@ import React from "react";
 export default function Protfolio(){
     return(
         <section id="protfolio" className="mt-2">
-            <h1 className="text-4xl text-center border-t-2 border-b-2 sticky top-0 bg-slate-800">作品集</h1>
+            <h1 className="lg:text-4xl md:text-3xl text-xl text-center border-t-2 border-b-2 sticky top-0 bg-slate-800">作品集</h1>
             <div className="ms-3 p-2">
                 <p className="my-2">以下是我的作品集，可以選取相關項目來瀏覽。</p>
                 <nav className="flex justify-center">
