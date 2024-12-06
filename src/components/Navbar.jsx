@@ -29,7 +29,7 @@ export default function Navbar(){
                         <a href="#skill">技能</a>
                     </li>
                     <li>
-                        <a href="#protfolio">作品集</a>
+                        <a href="#portfolio">作品集</a>
                     </li>
                 </ul>
             </nav>
