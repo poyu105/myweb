@@ -5,3 +5,25 @@
 body{
     background-color: rgb(4, 4, 36);
 }
+
+/* 調整 Slick 左右箭頭按鈕位置 */
+.slick-prev, .slick-next {
+    z-index: 10 !important; /* 確保按鈕顯示在圖片上方 */
+    top: 50% !important; /* 使按鈕垂直居中 */
+    transform: translateY(-50%) !important;
+  }
+  
+  .slick-prev {
+    left: -3px !important; /* 調整左箭頭的位置 */
+  }
+  
+  .slick-next {
+    right: 3px !important; /* 調整右箭頭的位置 */
+  }
+  
+  /* 讓箭頭更明顯（可選） */
+  .slick-prev:before, .slick-next:before {
+    font-size: 24px !important; /* 放大箭頭大小 */
+    color: rgb(0, 0, 0) !important; /* 修改箭頭顏色 */
+  }
+  
