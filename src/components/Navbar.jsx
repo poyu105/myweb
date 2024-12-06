@@ -17,18 +17,20 @@ export default function Navbar(){
     return(
         <header>
             <nav className="flex flex-row justify-between items-center md:p-4 p-2 text-neutral-200 bg-slate-900">
-                <a href="#" className="lg:text-4xl md:text-3xl text-xl">我的網頁</a>
-                <ul className="flex flex-row items-center gap-4 lg:text-lg md:text-base text-sm">
-                    <li>
+                <a href="https://poyu105.github.io/myweb/" className="lg:text-4xl md:text-3xl text-xl">
+                    <img className="bg-slate-200 hover:bg-slate-300 opacity-80 rounded-md" src="./image/logo.png" alt="Logo"/>
+                </a>
+                <ul className="flex flex-row items-center md:gap-4 gap-1 lg:text-lg md:text-base text-sm">
+                    <li className="hover:bg-slate-400 p-2 rounded-lg">
                         <a href="#top">Home</a>
                     </li>
-                    <li>
+                    <li className="hover:bg-slate-400 p-2 rounded-lg">
                         <a href="#about">關於我</a>
                     </li>
-                    <li>
+                    <li className="hover:bg-slate-400 p-2 rounded-lg">
                         <a href="#skill">技能</a>
                     </li>
-                    <li>
+                    <li className="hover:bg-slate-400 p-2 rounded-lg">
                         <a href="#portfolio">作品集</a>
                     </li>
                 </ul>
