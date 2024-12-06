@@ -3,7 +3,12 @@ import portfolios from "/src/assets/portfolio/portfolio.json";
 import Slider from "../components/Slider";
 
 export default function Portfolio(){
+    const [portfolio, setPortfolio] = useState([]);
     const [filter, setFilter] = useState('ALL');
+
+    useEffect(()=>{
+        filter == "ALL" ? setPortfolio(portfolios.portfolios): setPortfolio(portfolios.portfolios.filter((item)=>item.type.toLowerCase() == filter.toLowerCase()))
+    },[filter])
 
     return(
         <section id="portfolio" className="mt-2">
@@ -14,52 +19,66 @@ export default function Portfolio(){
                     <ul className="hidden sm:flex flex-row gap-10 bg-slate-900 opacity-80 text-center text-base text-slate-900 font-bold border rounded">
                         {["ALL", "Web", "Python", "C/C++", "Java"].map((type)=>(
                             <li key={type}>
-                                <button className="bg-gray-200 w-14 hover:bg-gray-600 hover:text-white rounded" onClick={()=>setFilter(type)}>{type}</button>
+                                <button className={`w-14 hover:bg-gray-600 hover:text-white rounded 
+                                                    ${
+                                                        filter.toLowerCase() === type.toLowerCase() ? 'bg-gray-600 text-white ':'bg-gray-200 '
+                                                    }`} onClick={()=>setFilter(type)}>{type}</button>
                             </li>
                         ))}
                     </ul>
-                    <select className="sm:hidden w-2/3 opacity-80 text-center text-slate-900 font-bold">
-                        <option className="bg-gray-400 w-14 hover:bg-gray-600 hover:text-white">ALL</option>
-                        <option className="bg-gray-400 w-14 hover:bg-gray-600 hover:text-white">Web</option>
-                        <option className="bg-gray-400 w-14 hover:bg-gray-600 hover:text-white">Python</option>
-                        <option className="bg-gray-400 w-14 hover:bg-gray-600 hover:text-white">C/C++</option>
-                        <option className="bg-gray-400 w-14 hover:bg-gray-600 hover:text-white">Java</option>
+                    <select className="sm:hidden w-2/3 opacity-80 text-center text-slate-900 font-bold" onChange={(e)=>setFilter(e.target.value)}>
+                        {["ALL", "Web", "Python", "C/C++", "Java"].map((type)=>(
+                            <option value={type} key={type}
+                                className={`w-14 hover:bg-gray-600 hover:text-white rounded 
+                                ${
+                                    filter.toLowerCase() === type.toLowerCase() ? 'bg-gray-600 text-white ':'bg-gray-400 '
+                                }`}>
+                                {type}
+                            </option>
+                        ))}
                     </select>
                 </nav>
-                <div>
-                    {filter == "ALL" ? (
-                        portfolios.portfolios.map((item, index)=>(
-                            <div key={index} className="flex justify-center gap-5 my-3 border-b-2 border-gray-500">
-                                <div className="flex items-center w-5/12">
-                                    <div className="container">
-                                        {Array.isArray(item.images) && item.images[0] !== "NONE" ? (
-                                            <Slider images={item.images} />
-                                        ) : (
-                                            <p className="text-center">此專案暫無圖片</p>
-                                        )}
-                                    </div>
-                                </div>
-                                <div className="w-6/12 flex flex-col justify-between">
-                                    <h4 className="text-2xl my-2">{item.name}</h4>
-                                    <p className="px-2">{item.describe}</p>
-                                    <p className="text-sm px-2 mt-2">
-                                        {item.tag.map((tag)=>{
-                                            return "#"+tag+" "
-                                        })}
-                                    </p>
-                                    <div className="px-2 my-2 flex gap-3">
-                                        <button className="bg-blue-600 hover:bg-blue-700 rounded">
-                                            <a className="p-2" href={item.link} target="_blank">檢視網頁</a>
-                                        </button>
-                                        <button className="bg-gray-600 hover:bg-gray-700 rounded">
-                                            <a className="p-2" href={item.source_link} target="_blank">檢視原始碼</a>
-                                        </button>
-                                    </div>
-                                </div>
+                <p className="text-base font-bold">搜尋結果: 共{portfolio.length}筆資料</p>
+                {portfolio.map((item, index)=>(
+                    <div key={index} className="flex justify-center lg:flex-row flex-col lg:gap-5 gap-0 my-3 border-b-2 border-gray-500">
+                        <div className="flex items-center lg:w-5/12 w-full lg:h-auto h-3/6">
+                            <div className="container">
+                                {Array.isArray(item.images) && item.images[0] !== "NONE" ? (
+                                    <Slider images={item.images} />
+                                ) : (
+                                    <p className="text-center">此專案暫無圖片</p>
+                                )}
                             </div>
-                        ))
-                    ):<></>}
-                </div>
+                        </div>
+                        <div className="flex flex-col justify-between lg:w-6/12 w-full px-2">
+                            <h3 className="lg:text-xl md:text-lg text-base my-2">{item.name}</h3>
+                            <p className="break-words">{item.describe}</p>
+                            <p className="text-sm mt-2">
+                                {item.tag.map((tag)=>{
+                                    return "#"+tag+" "
+                                })}
+                            </p>
+                            <div className="my-2 flex gap-3">
+                                <button
+                                    className={`bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 rounded ${item.link === "NONE" ? 'cursor-not-allowed' : ''}`}
+                                    disabled={item.link === "NONE"}
+                                >
+                                    <a 
+                                        className={`p-2 text-sm ${item.link === "NONE" ? 'pointer-events-none' : ''}`} 
+                                        href={item.link !== "NONE" ? item.link : "#"} 
+                                        target={item.link !== "NONE" ? "_blank" : ""} 
+                                        rel="noopener noreferrer"
+                                    >
+                                        檢視網頁
+                                    </a>
+                                </button>
+                                <button className="bg-gray-600 hover:bg-gray-700 rounded">
+                                    <a className="p-2 text-sm" href={item.source_link} target="_blank">檢視原始碼</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     )
