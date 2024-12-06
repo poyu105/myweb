@@ -3,7 +3,7 @@ import React from "react";
 export default function Skill(){
     return(
         <section id="skill">
-            <h1 className="lg:text-4xl md:text-3xl text-xl text-center border-t-2 border-b-2 sticky top-0 bg-slate-800">我的技能</h1>
+            <h1 className="z-50 lg:text-4xl md:text-3xl text-xl text-center border-t-2 border-b-2 sticky top-0 bg-slate-800">我的技能</h1>
             <div className="ms-3 p-2">
                 <p className="my-2">目前的我主要專注在網頁開發，不過偶爾也會使用其他程式撰寫一寫小專案，以下是我所擁有的技能:</p>
                 <div className="my-2">
