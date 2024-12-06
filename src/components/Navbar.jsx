@@ -35,10 +35,6 @@ export default function Navbar(){
                     </li>
                 </ul>
             </nav>
-            <div className="flex justify-center items-center sm:flex-row flex-col sm:text-base customer-ssm:text-sm text-xs font-bold bg-amber-200 drop-shadow">
-                <span>個人網頁更新中... &emsp;最後更新日期:{lastModifiedDate} &emsp;</span>
-                <small>&copy;2024 <a className="text-center border-b-2 border-black hover:text-gray-600 hover:border-gray-600" href="https://poyu105.github.io/myweb" target="_blank">Poyu webDev.</a></small>
-            </div>
         </header>
     )
 }
