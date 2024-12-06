@@ -1,0 +1,62 @@
+{
+    "portfolios":[
+        {
+            "name":"To-Do List",
+            "describe":"此專案為一個簡單的代辦事項清單，主要運用react狀態管理完成開發，為一小型作品",
+            "images":["NONE"],
+            "link":"https://poyu105.github.io/To-Do-List/",
+            "source_link":"https://github.com/poyu105/To-Do-List",
+            "tag":["React","Javascript","JSX","Tailwind CSS"],
+            "date":"2024-10-21",
+            "type":"web"
+        },
+        {
+            "name":"LifeHub-生活Pie",
+            "describe":"此專案為個人發想作品，主要以地區為主的生活內容分享平台。使用者可以在此分享該地區的美食推薦、交通指南、購物指南以及休閒娛樂活動，讓大家能夠更方便地了解周邊的生活資訊。#本靜態網頁無法使用資料庫功能，詳細後端代碼另見github: https://github.com/poyu105/LifeHub-Backend",
+            "images":["https://raw.githubusercontent.com/poyu105/myweb/refs/heads/master/media/portfolio/lifehub-01.png",
+                      "https://raw.githubusercontent.com/poyu105/myweb/refs/heads/master/media/portfolio/lifehub-02.png",
+                      "https://raw.githubusercontent.com/poyu105/myweb/refs/heads/master/media/portfolio/lifehub-03.png"],
+            "link":"https://poyu105.github.io/LifeHub/",
+            "source_link":"https://github.com/poyu105/LifeHub",
+            "tag":["Vite","React","Javascript","JSX","Tailwind CSS","Express.js","Node.js","RESTful API","MongoDB"],
+            "date":"2024-10-21",
+            "type":"web"
+        },
+        {
+            "name":"線上點餐系統",
+            "describe":"此專案為個人發想作品，使用Vite+React開發的線上點餐系統(無後端資料庫功能)#目前網頁處於開發階段，僅供檢視目前進度",
+            "images":["NONE"],
+            "link":"https://poyu105.github.io/OrderSystem/",
+            "source_link":"https://github.com/poyu105/OrderSystem",
+            "tag":["Vite","React","Javascript","JSX"],
+            "date":"2024-7-3",
+            "type":"web"
+        },
+        {
+            "name":"旅遊行程預約平台",
+            "describe":"此專案為學校課堂分組作品，網頁提供管理員 新增/修改/刪除 行程及其各項景點，並提供使用者預約該行程，且可查看和修改相關預約資訊。",
+            "introduction":"",
+            "images":["https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG01.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG02.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/TravelIMG03.png"],
+            "link":"NONE",
+            "source_link":"https://github.com/poyu105/Travel",
+            "tag":["C#","ASP.NET Core","MS SQL","Razor","MVC","ASP.NET Identity"],
+            "date":"2024-6-14",
+            "type":"web"
+        },
+        {
+            "name":"台中好健行",
+            "describe":"利用政府開放資料json檔加以修改並製作成一個台中市健行步道的瀏覽網頁",
+            "introduction":"",
+            "images":["https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG01.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG02.png",
+                     "https://raw.githubusercontent.com/poyu105/myweb/master/media/portfolio/taichung-hikingIMG03.png"],
+            "link":"https://poyu105.github.io/taichung-hiking/",
+            "source_link":"https://github.com/poyu105/taichung-hiking",
+            "tag":["Html","CSS","Bootstrap","Javascript","JQuery"],
+            "date":"2023-12-23",
+            "type":"web"
+        }
+    ]
+}
